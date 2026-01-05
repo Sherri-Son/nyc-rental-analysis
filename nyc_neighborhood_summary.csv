@@ -1,0 +1,13 @@
+Neighborhood,Price,convenience_score,livability_score,affordability_score,combined_score,tract_count
+Bedford-Stuyvesant,3300.0,0.2,95.1,61.6,47.6,69
+Bushwick/East New York,2800.0,3.0,96.6,73.1,49.8,1
+Downtown Brooklyn/Brooklyn Heights,3185.0,1.7,95.3,60.2,48.5,463
+Financial District/Battery Park,4800.0,7.2,87.5,34.3,47.3,295
+Fort Greene/Clinton Hill,3000.0,1.4,95.3,62.2,48.3,199
+Jackson Heights/Elmhurst,2867.0,0.0,97.5,71.5,48.8,4
+Long Island City/Astoria,2850.0,1.0,95.4,71.6,48.2,322
+Lower East Side/Chinatown,5168.0,9.4,94.4,28.0,51.9,4
+Morrisania/Crotona,3150.0,0.0,98.1,64.6,49.0,2
+Mott Haven/Hunts Point,2512.0,0.5,90.5,78.4,45.5,268
+North Shore (St. George/New Brighton),3200.0,0.1,95.2,63.4,47.7,15
+Sunnyside/Woodside,2825.0,0.2,97.1,74.0,48.7,305
