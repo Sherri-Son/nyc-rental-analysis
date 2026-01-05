@@ -2,6 +2,8 @@
 
 A data-driven analysis of NYC neighborhoods at the census tract level, integrating housing costs, transit accessibility, crime, noise, and amenity data to help identify neighborhoods that balance affordability, convenience, and quality of life.
 
+---Gotta modify with pictures----
+
 ## Project Overview
 
 ### Research Question
