@@ -21,26 +21,51 @@ This analysis helps identify neighborhoods that balance:
 
 ## 📊 Interactive Visualizations
 
-This analysis includes interactive heatmaps showing the geographic distribution of neighborhood quality across NYC. **Click on the links below to explore the full interactive maps** (they open in your browser):
+This analysis includes **4 interactive heatmaps** showing the geographic distribution of neighborhood quality across NYC. 
 
 ### 🗺️ Available Maps
 
-1. **[Top Neighborhoods Map]
+The following HTML files are included in the project (located in the `outputs/` folder):
 
-2. **[Convenience Heatmap](./convenience_heatmap.html)**
-   - Shows transit accessibility across NYC (MTA ridership + Citibike + amenities)
-   - **Key Finding**: Extreme concentration in lower Manhattan/Financial District
-   - Reveals NYC's transit inequality - most areas score below 10/100
+**1. `top_neighborhoods_map.html`** 
+- Interactive markers showing the top 20 census tracts by combined score
+- Color-coded by performance (green = excellent, orange = good)
+- **Click any marker** for detailed neighborhood information including rent, scores, and metrics
 
-3. **[Livability Heatmap](./livability_heatmap.html)**
-   - Highlights quiet, safe neighborhoods (low crime + low noise)
-   - **Key Finding**: Queens and outer Brooklyn have the highest livability scores
-   - Shows that expensive ≠ peaceful
+**2. `convenience_heatmap.html`**
+- Shows transit accessibility across NYC (MTA ridership + Citibike + amenities)
+- **Key Finding**: Extreme concentration in lower Manhattan/Financial District
+- Reveals NYC's transit inequality - most areas score below 10/100
 
-4. **[Affordability Heatmap](./affordability_heatmap.html)**
-   - Displays most affordable areas across the city
-   - **Key Finding**: Bronx and parts of Queens offer best value
-   - Manhattan is uniformly expensive with affordability scores near 0
+**3. `livability_heatmap.html`**
+- Highlights quiet, safe neighborhoods (low crime + low noise)
+- **Key Finding**: Queens and outer Brooklyn have the highest livability scores
+- Shows that expensive ≠ peaceful
+
+**4. `affordability_heatmap.html`**
+- Displays most affordable areas across the city
+- **Key Finding**: Bronx and parts of Queens offer best value
+- Manhattan is uniformly expensive with affordability scores near 0
+
+### 📂 How to View the Maps
+
+**Option 1: Local Viewing (Recommended)**
+1. Download all files from the repository
+2. Navigate to the `outputs/` folder
+3. Double-click any `.html` file to open it in your web browser
+4. Maps are fully interactive - zoom, pan, and click for details
+
+**Option 2: GitHub Pages (if deployed)**
+If this repository is set up with GitHub Pages, the maps will be viewable at:
+- `https://[your-username].github.io/[repo-name]/outputs/top_neighborhoods_map.html`
+- `https://[your-username].github.io/[repo-name]/outputs/convenience_heatmap.html`
+- `https://[your-username].github.io/[repo-name]/outputs/livability_heatmap.html`
+- `https://[your-username].github.io/[repo-name]/outputs/affordability_heatmap.html`
+
+**Option 3: HTMLPreview (Quick Online View)**
+You can use [htmlpreview.github.io](http://htmlpreview.github.io/) to view HTML files directly from GitHub without cloning:
+1. Get the raw GitHub URL of the HTML file
+2. Paste it into htmlpreview.github.io
 
 ### 🎯 What the Maps Reveal
 
@@ -52,6 +77,8 @@ This analysis includes interactive heatmaps showing the geographic distribution 
 
 **Visual Insights:**
 The heatmaps make it immediately clear why finding the "perfect" NYC neighborhood is challenging - the areas with the best transit access (red zones in convenience map) barely overlap with the most affordable areas (red zones in affordability map).
+
+**💡 Pro Tip:** Open all three heatmaps (`convenience_heatmap.html`, `livability_heatmap.html`, `affordability_heatmap.html`) in separate browser tabs and switch between them to see how the three qualities never overlap in the same geographic areas.
 
 ---
 
@@ -279,26 +306,26 @@ Several neighborhoods offer the rare combination of high livability (>95/100) wi
 - Sunnyside/Woodside: $2,825/month, 97.1 livability, 74.0 affordability
 - Jackson Heights/Elmhurst: $2,867/month, 97.5 livability, 71.5 affordability
 
-**💡 See these areas in the [Livability Heatmap](./livability_heatmap.html) - they're the red zones in Queens!**
+💡 **Visual Evidence:** Open `livability_heatmap.html` from the outputs folder - these neighborhoods appear as red/hot zones in Queens!
 
 **The Convenience Premium:**
 Manhattan's Financial District commands 78% higher rents than comparable-livability areas in Queens, primarily due to transit access. This suggests renters pay substantial premiums for convenience even when residential quality is better elsewhere.
 
-**💡 The [Convenience Heatmap](./convenience_heatmap.html) shows why - transit infrastructure is heavily concentrated in lower Manhattan with virtually no other NYC areas achieving convenience scores above 30/100.**
+💡 **Visual Evidence:** `convenience_heatmap.html` shows why - transit infrastructure is heavily concentrated in lower Manhattan with virtually no other NYC areas achieving convenience scores above 30/100.
 
 **The Livability Surprise:**
 Contrary to the "expensive = better" assumption, Manhattan has the **lowest livability score** (87.6) among all boroughs. Queens (96.2) and Brooklyn (95.3) offer significantly quieter, safer neighborhoods at 41% and 37% lower median rents respectively.
 
-**💡 Compare the [Livability Heatmap](./livability_heatmap.html) with the [Affordability Heatmap](./affordability_heatmap.html) - the best living conditions are NOT in the most expensive areas.**
+💡 **Visual Evidence:** Compare `livability_heatmap.html` with `affordability_heatmap.html` - the best living conditions are NOT in the most expensive areas. Queens glows red (excellent) in livability while also showing strong affordability.
 
 **Borough Strategy:**
 - **Choose Manhattan if**: Transit access is critical and budget permits ($4,800+ median)
 - **Choose Brooklyn if**: You want balance - moderate prices with good livability  
-  *→ See [Top Neighborhoods Map](./top_neighborhoods_map.html) for best Brooklyn tracts*
+  → *See `top_neighborhoods_map.html` for best Brooklyn tracts*
 - **Choose Queens if**: Maximizing affordability while maintaining quality is the priority  
-  *→ Queens dominates the [Livability Heatmap](./livability_heatmap.html)*
+  → *Queens dominates `livability_heatmap.html` with brightest zones*
 - **Choose Bronx if**: Budget is primary concern and convenience is secondary  
-  *→ Highest affordability in [Affordability Heatmap](./affordability_heatmap.html)*
+  → *Highest affordability zones in `affordability_heatmap.html`*
 - **Choose Staten Island if**: You prefer quietest areas and don't rely on public transit
 
 ### Example Neighborhood Rankings
