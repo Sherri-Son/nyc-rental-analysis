@@ -25,7 +25,582 @@ This analysis includes interactive heatmaps showing the geographic distribution 
 
 ### 🗺️ Available Maps
 
-1. **[Top Neighborhoods Map](./top_neighborhoods_map.html)** 
+1. **[Top Neighborhoods Map](<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5c833a999dae99247649e12cbe805ca2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; right: 50px; width: 200px; height: 140px; 
+            background-color: white; z-index:9999; font-size:14px;
+            border:2px solid grey; border-radius: 5px; padding: 10px">
+<p style="margin-bottom: 8px;"><b>Combined Score</b></p>
+<p style="margin: 4px;"><i class="fa fa-circle" style="color:darkgreen"></i> 80-100 (Excellent)</p>
+<p style="margin: 4px;"><i class="fa fa-circle" style="color:green"></i> 70-79 (Good)</p>
+<p style="margin: 4px;"><i class="fa fa-circle" style="color:lightgreen"></i> 60-69 (Fair)</p>
+<p style="margin: 4px;"><i class="fa fa-circle" style="color:orange"></i> < 60 (Lower)</p>
+</div>
+    
+            <div class="folium-map" id="map_5c833a999dae99247649e12cbe805ca2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5c833a999dae99247649e12cbe805ca2 = L.map(
+                "map_5c833a999dae99247649e12cbe805ca2",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d95bd395b209cdf2763dfdab0754279d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d95bd395b209cdf2763dfdab0754279d.addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+            var circle_marker_b1ad713400ab83fb013d206b91820629 = L.circleMarker(
+                [40.770554011884734, -73.96001471052776],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_4f1c83962e3742d09d947179c7935f66 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bd3831b18b765a46c2b132ef65a286d4 = $(`<div id="html_bd3831b18b765a46c2b132ef65a286d4" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,795<br>     <hr>     <b>Convenience:</b> 36.0/100<br>     <b>Livability:</b> 89.8/100<br>     <b>Affordability:</b> 0.0/100<br>     <b>Combined:</b> 62.9/100     </div>`)[0];
+                popup_4f1c83962e3742d09d947179c7935f66.setContent(html_bd3831b18b765a46c2b132ef65a286d4);
+            
+        
+
+        circle_marker_b1ad713400ab83fb013d206b91820629.bindPopup(popup_4f1c83962e3742d09d947179c7935f66)
+        ;
+
+        
+    
+    
+            var circle_marker_1c44660a3f3a034eae9d7f1bce0bb1ba = L.circleMarker(
+                [40.82817143064099, -74.00725061393479],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_9906bfaaa6bd6b560fb6259078e761c2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a47aee74e30a3e9b20d91c88340cfb05 = $(`<div id="html_a47aee74e30a3e9b20d91c88340cfb05" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,915<br>     <hr>     <b>Convenience:</b> 27.3/100<br>     <b>Livability:</b> 93.2/100<br>     <b>Affordability:</b> 21.5/100<br>     <b>Combined:</b> 60.2/100     </div>`)[0];
+                popup_9906bfaaa6bd6b560fb6259078e761c2.setContent(html_a47aee74e30a3e9b20d91c88340cfb05);
+            
+        
+
+        circle_marker_1c44660a3f3a034eae9d7f1bce0bb1ba.bindPopup(popup_9906bfaaa6bd6b560fb6259078e761c2)
+        ;
+
+        
+    
+    
+            var circle_marker_c702e43892b443acab84ed2cffe25f0b = L.circleMarker(
+                [40.80629939418114, -73.99198553514647],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_5b62ce815c3cae470adb1f9c63322ec8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_088fbd5d131592c0296ff984636874bc = $(`<div id="html_088fbd5d131592c0296ff984636874bc" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,900<br>     <hr>     <b>Convenience:</b> 31.5/100<br>     <b>Livability:</b> 88.4/100<br>     <b>Affordability:</b> 21.9/100<br>     <b>Combined:</b> 59.9/100     </div>`)[0];
+                popup_5b62ce815c3cae470adb1f9c63322ec8.setContent(html_088fbd5d131592c0296ff984636874bc);
+            
+        
+
+        circle_marker_c702e43892b443acab84ed2cffe25f0b.bindPopup(popup_5b62ce815c3cae470adb1f9c63322ec8)
+        ;
+
+        
+    
+    
+            var circle_marker_5000763adcac231cf4905d6c55ca069b = L.circleMarker(
+                [40.7929658484197, -73.98456381567063],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_24572b906fae9d43247b7ef9b7074f0b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9323e3e408d6b415ae1e7f167356931f = $(`<div id="html_9323e3e408d6b415ae1e7f167356931f" style="width: 100.0%; height: 100.0%;">     <b>Lower East Side/Chinatown</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,249<br>     <hr>     <b>Convenience:</b> 25.7/100<br>     <b>Livability:</b> 91.5/100<br>     <b>Affordability:</b> 13.3/100<br>     <b>Combined:</b> 58.6/100     </div>`)[0];
+                popup_24572b906fae9d43247b7ef9b7074f0b.setContent(html_9323e3e408d6b415ae1e7f167356931f);
+            
+        
+
+        circle_marker_5000763adcac231cf4905d6c55ca069b.bindPopup(popup_24572b906fae9d43247b7ef9b7074f0b)
+        ;
+
+        
+    
+    
+            var circle_marker_f772a2e2119938a8303f4d2f10cc6960 = L.circleMarker(
+                [40.74870186404424, -73.97559300157829],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_63e171e92421b2f71aa9e2a9f8ced139 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d48f192094dbd1aac4eddd5e9bdf04b4 = $(`<div id="html_d48f192094dbd1aac4eddd5e9bdf04b4" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,527<br>     <hr>     <b>Convenience:</b> 23.6/100<br>     <b>Livability:</b> 92.0/100<br>     <b>Affordability:</b> 6.5/100<br>     <b>Combined:</b> 57.8/100     </div>`)[0];
+                popup_63e171e92421b2f71aa9e2a9f8ced139.setContent(html_d48f192094dbd1aac4eddd5e9bdf04b4);
+            
+        
+
+        circle_marker_f772a2e2119938a8303f4d2f10cc6960.bindPopup(popup_63e171e92421b2f71aa9e2a9f8ced139)
+        ;
+
+        
+    
+    
+            var circle_marker_a4cf0cae5897a6a9b01005579f791064 = L.circleMarker(
+                [40.64379945203362, -73.9156824038607],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_e9e7218494180532b7ad91471066a172 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_afc270f0a48fd55894704c5cb99a5af1 = $(`<div id="html_afc270f0a48fd55894704c5cb99a5af1" style="width: 100.0%; height: 100.0%;">     <b>Downtown Brooklyn/Brooklyn Heights</b><br>     <b>Borough:</b> Brooklyn<br>     <b>Median Rent:</b> $3,914<br>     <hr>     <b>Convenience:</b> 22.7/100<br>     <b>Livability:</b> 91.9/100<br>     <b>Affordability:</b> 45.9/100<br>     <b>Combined:</b> 57.3/100     </div>`)[0];
+                popup_e9e7218494180532b7ad91471066a172.setContent(html_afc270f0a48fd55894704c5cb99a5af1);
+            
+        
+
+        circle_marker_a4cf0cae5897a6a9b01005579f791064.bindPopup(popup_e9e7218494180532b7ad91471066a172)
+        ;
+
+        
+    
+    
+            var circle_marker_261b3804dd1ff5f5814a65af67f43477 = L.circleMarker(
+                [40.738908361216815, -74.00123262178415],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_fecf6a4b57bc7c6d8c08e27b7d07ecdd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4a865bf42d80ae4c43202cf3f46d0867 = $(`<div id="html_4a865bf42d80ae4c43202cf3f46d0867" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,118<br>     <hr>     <b>Convenience:</b> 16.8/100<br>     <b>Livability:</b> 97.6/100<br>     <b>Affordability:</b> 16.5/100<br>     <b>Combined:</b> 57.2/100     </div>`)[0];
+                popup_fecf6a4b57bc7c6d8c08e27b7d07ecdd.setContent(html_4a865bf42d80ae4c43202cf3f46d0867);
+            
+        
+
+        circle_marker_261b3804dd1ff5f5814a65af67f43477.bindPopup(popup_fecf6a4b57bc7c6d8c08e27b7d07ecdd)
+        ;
+
+        
+    
+    
+            var circle_marker_b68d08e828b96ab6ad9146615908f38e = L.circleMarker(
+                [40.81971761457749, -73.96977655615864],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_d8afd173171f9545fd04b28c17896036 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_941d186aa9b3ea03c02304de252618e8 = $(`<div id="html_941d186aa9b3ea03c02304de252618e8" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,795<br>     <hr>     <b>Convenience:</b> 24.1/100<br>     <b>Livability:</b> 90.0/100<br>     <b>Affordability:</b> 0.0/100<br>     <b>Combined:</b> 57.1/100     </div>`)[0];
+                popup_d8afd173171f9545fd04b28c17896036.setContent(html_941d186aa9b3ea03c02304de252618e8);
+            
+        
+
+        circle_marker_b68d08e828b96ab6ad9146615908f38e.bindPopup(popup_d8afd173171f9545fd04b28c17896036)
+        ;
+
+        
+    
+    
+            var circle_marker_0642ea4ec663aaca9332867bc5a45014 = L.circleMarker(
+                [40.79321150117432, -73.9619585431138],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_1e67d24c3926f597a41357101e4c33f1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_15d4163fcae4ee8738309861b8de3e6f = $(`<div id="html_15d4163fcae4ee8738309861b8de3e6f" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,915<br>     <hr>     <b>Convenience:</b> 22.6/100<br>     <b>Livability:</b> 91.0/100<br>     <b>Affordability:</b> 21.5/100<br>     <b>Combined:</b> 56.8/100     </div>`)[0];
+                popup_1e67d24c3926f597a41357101e4c33f1.setContent(html_15d4163fcae4ee8738309861b8de3e6f);
+            
+        
+
+        circle_marker_0642ea4ec663aaca9332867bc5a45014.bindPopup(popup_1e67d24c3926f597a41357101e4c33f1)
+        ;
+
+        
+    
+    
+            var circle_marker_d71bbbcb81dd5597167377a16277c7ba = L.circleMarker(
+                [40.6990072577796, -73.989554958728],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_7a3eb470d60e0b0acd19bade8723fd23 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b46e6190dc606dcc6fae0bf782f877b5 = $(`<div id="html_b46e6190dc606dcc6fae0bf782f877b5" style="width: 100.0%; height: 100.0%;">     <b>Downtown Brooklyn/Brooklyn Heights</b><br>     <b>Borough:</b> Brooklyn<br>     <b>Median Rent:</b> $4,500<br>     <hr>     <b>Convenience:</b> 15.1/100<br>     <b>Livability:</b> 98.5/100<br>     <b>Affordability:</b> 31.6/100<br>     <b>Combined:</b> 56.8/100     </div>`)[0];
+                popup_7a3eb470d60e0b0acd19bade8723fd23.setContent(html_b46e6190dc606dcc6fae0bf782f877b5);
+            
+        
+
+        circle_marker_d71bbbcb81dd5597167377a16277c7ba.bindPopup(popup_7a3eb470d60e0b0acd19bade8723fd23)
+        ;
+
+        
+    
+    
+            var circle_marker_502507a9a3688a70ffce731572f3df8e = L.circleMarker(
+                [40.735158449429576, -73.96044551480985],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_c46cc06455ade159ba9ac2effbac7187 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2228c211bf6f0f7024dd62cad7219028 = $(`<div id="html_2228c211bf6f0f7024dd62cad7219028" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,872<br>     <hr>     <b>Convenience:</b> 16.9/100<br>     <b>Livability:</b> 95.6/100<br>     <b>Affordability:</b> 22.6/100<br>     <b>Combined:</b> 56.2/100     </div>`)[0];
+                popup_c46cc06455ade159ba9ac2effbac7187.setContent(html_2228c211bf6f0f7024dd62cad7219028);
+            
+        
+
+        circle_marker_502507a9a3688a70ffce731572f3df8e.bindPopup(popup_c46cc06455ade159ba9ac2effbac7187)
+        ;
+
+        
+    
+    
+            var circle_marker_6c5c9f70858e32c039b6204152752791 = L.circleMarker(
+                [40.830090985216195, -74.00414758763127],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_d01c8c98fe0a608ed7369ec0d6079040 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e5460824aa4a32c250de909b9ad3f3a8 = $(`<div id="html_e5460824aa4a32c250de909b9ad3f3a8" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,872<br>     <hr>     <b>Convenience:</b> 16.9/100<br>     <b>Livability:</b> 95.5/100<br>     <b>Affordability:</b> 22.6/100<br>     <b>Combined:</b> 56.2/100     </div>`)[0];
+                popup_d01c8c98fe0a608ed7369ec0d6079040.setContent(html_e5460824aa4a32c250de909b9ad3f3a8);
+            
+        
+
+        circle_marker_6c5c9f70858e32c039b6204152752791.bindPopup(popup_d01c8c98fe0a608ed7369ec0d6079040)
+        ;
+
+        
+    
+    
+            var circle_marker_ff5d2c40e0b576311d4b2f8eecff6dc2 = L.circleMarker(
+                [40.711444264080036, -73.98769484070147],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_97c7f27e7ad6182942ef5a961e0ac310 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_00ef083275ffc69a83dac21a3b6172c4 = $(`<div id="html_00ef083275ffc69a83dac21a3b6172c4" style="width: 100.0%; height: 100.0%;">     <b>Fort Greene/Clinton Hill</b><br>     <b>Borough:</b> Brooklyn<br>     <b>Median Rent:</b> $4,750<br>     <hr>     <b>Convenience:</b> 26.1/100<br>     <b>Livability:</b> 86.0/100<br>     <b>Affordability:</b> 25.5/100<br>     <b>Combined:</b> 56.1/100     </div>`)[0];
+                popup_97c7f27e7ad6182942ef5a961e0ac310.setContent(html_00ef083275ffc69a83dac21a3b6172c4);
+            
+        
+
+        circle_marker_ff5d2c40e0b576311d4b2f8eecff6dc2.bindPopup(popup_97c7f27e7ad6182942ef5a961e0ac310)
+        ;
+
+        
+    
+    
+            var circle_marker_42511e43f288ffe9997debb72a50b8cf = L.circleMarker(
+                [40.754333911067825, -73.92631144627467],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_824bfed9c12608e1240281018db77dfd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_90292611279f6e570e3b7e9f140ecba5 = $(`<div id="html_90292611279f6e570e3b7e9f140ecba5" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,872<br>     <hr>     <b>Convenience:</b> 17.9/100<br>     <b>Livability:</b> 94.0/100<br>     <b>Affordability:</b> 22.6/100<br>     <b>Combined:</b> 55.9/100     </div>`)[0];
+                popup_824bfed9c12608e1240281018db77dfd.setContent(html_90292611279f6e570e3b7e9f140ecba5);
+            
+        
+
+        circle_marker_42511e43f288ffe9997debb72a50b8cf.bindPopup(popup_824bfed9c12608e1240281018db77dfd)
+        ;
+
+        
+    
+    
+            var circle_marker_027460f636e5c3a02471ee7123b2971a = L.circleMarker(
+                [40.751282496720705, -73.92463679669254],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_fd3163f4c15a0fa79674f124f2b2c701 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_45b653cf99339604ea0431a06cfdb152 = $(`<div id="html_45b653cf99339604ea0431a06cfdb152" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,648<br>     <hr>     <b>Convenience:</b> 15.9/100<br>     <b>Livability:</b> 95.8/100<br>     <b>Affordability:</b> 3.6/100<br>     <b>Combined:</b> 55.9/100     </div>`)[0];
+                popup_fd3163f4c15a0fa79674f124f2b2c701.setContent(html_45b653cf99339604ea0431a06cfdb152);
+            
+        
+
+        circle_marker_027460f636e5c3a02471ee7123b2971a.bindPopup(popup_fd3163f4c15a0fa79674f124f2b2c701)
+        ;
+
+        
+    
+    
+            var circle_marker_6f4f9a78fd6a567cc08bd36c5e5548dd = L.circleMarker(
+                [40.75144045098534, -73.94036026518835],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_11fede2922e992bb886c24ad1e21b745 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5954462732cffc45c755f7d9c4139548 = $(`<div id="html_5954462732cffc45c755f7d9c4139548" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,872<br>     <hr>     <b>Convenience:</b> 23.9/100<br>     <b>Livability:</b> 87.5/100<br>     <b>Affordability:</b> 22.6/100<br>     <b>Combined:</b> 55.7/100     </div>`)[0];
+                popup_11fede2922e992bb886c24ad1e21b745.setContent(html_5954462732cffc45c755f7d9c4139548);
+            
+        
+
+        circle_marker_6f4f9a78fd6a567cc08bd36c5e5548dd.bindPopup(popup_11fede2922e992bb886c24ad1e21b745)
+        ;
+
+        
+    
+    
+            var circle_marker_6793b98402af85aac1bd1a79a59ad06f = L.circleMarker(
+                [40.76352422429595, -73.99073862308266],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_73c7b059cfbd9a7d37c2dc0f8213f724 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fd1fb1bfd7de33164cddd9f92643c6a3 = $(`<div id="html_fd1fb1bfd7de33164cddd9f92643c6a3" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,200<br>     <hr>     <b>Convenience:</b> 29.8/100<br>     <b>Livability:</b> 81.2/100<br>     <b>Affordability:</b> 14.5/100<br>     <b>Combined:</b> 55.5/100     </div>`)[0];
+                popup_73c7b059cfbd9a7d37c2dc0f8213f724.setContent(html_fd1fb1bfd7de33164cddd9f92643c6a3);
+            
+        
+
+        circle_marker_6793b98402af85aac1bd1a79a59ad06f.bindPopup(popup_73c7b059cfbd9a7d37c2dc0f8213f724)
+        ;
+
+        
+    
+    
+            var circle_marker_e0f839727c42acb4257df6365b4fa1b6 = L.circleMarker(
+                [40.68067564316322, -73.98443278859936],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_4c42da0273be515cb7c1965ebd9c8bcb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7b95c825323209c2c2ef6eaafb8b5ab1 = $(`<div id="html_7b95c825323209c2c2ef6eaafb8b5ab1" style="width: 100.0%; height: 100.0%;">     <b>Downtown Brooklyn/Brooklyn Heights</b><br>     <b>Borough:</b> Brooklyn<br>     <b>Median Rent:</b> $4,700<br>     <hr>     <b>Convenience:</b> 22.1/100<br>     <b>Livability:</b> 88.6/100<br>     <b>Affordability:</b> 26.7/100<br>     <b>Combined:</b> 55.3/100     </div>`)[0];
+                popup_4c42da0273be515cb7c1965ebd9c8bcb.setContent(html_7b95c825323209c2c2ef6eaafb8b5ab1);
+            
+        
+
+        circle_marker_e0f839727c42acb4257df6365b4fa1b6.bindPopup(popup_4c42da0273be515cb7c1965ebd9c8bcb)
+        ;
+
+        
+    
+    
+            var circle_marker_626d304fbccf52c3bb7908d1be601bfe = L.circleMarker(
+                [40.77629450186421, -73.95277669734878],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_dc25f68e07a17b6b7ca2947c6b990e06 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8e3f86473adfd3e34683817fc192c024 = $(`<div id="html_8e3f86473adfd3e34683817fc192c024" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $5,795<br>     <hr>     <b>Convenience:</b> 20.4/100<br>     <b>Livability:</b> 90.2/100<br>     <b>Affordability:</b> 0.0/100<br>     <b>Combined:</b> 55.3/100     </div>`)[0];
+                popup_dc25f68e07a17b6b7ca2947c6b990e06.setContent(html_8e3f86473adfd3e34683817fc192c024);
+            
+        
+
+        circle_marker_626d304fbccf52c3bb7908d1be601bfe.bindPopup(popup_dc25f68e07a17b6b7ca2947c6b990e06)
+        ;
+
+        
+    
+    
+            var circle_marker_f2aaa885ef6855625760998e07567990 = L.circleMarker(
+                [40.7622229140198, -73.97718475062604],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+    
+        var popup_ee37cb57aa35208d01736fcb5225ead7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_48821da714dad0f0d4bc86a3ae16ff49 = $(`<div id="html_48821da714dad0f0d4bc86a3ae16ff49" style="width: 100.0%; height: 100.0%;">     <b>Financial District/Battery Park</b><br>     <b>Borough:</b> Manhattan<br>     <b>Median Rent:</b> $4,915<br>     <hr>     <b>Convenience:</b> 19.6/100<br>     <b>Livability:</b> 90.8/100<br>     <b>Affordability:</b> 21.5/100<br>     <b>Combined:</b> 55.2/100     </div>`)[0];
+                popup_ee37cb57aa35208d01736fcb5225ead7.setContent(html_48821da714dad0f0d4bc86a3ae16ff49);
+            
+        
+
+        circle_marker_f2aaa885ef6855625760998e07567990.bindPopup(popup_ee37cb57aa35208d01736fcb5225ead7)
+        ;
+
+        
+    
+    
+            tile_layer_d95bd395b209cdf2763dfdab0754279d.addTo(map_5c833a999dae99247649e12cbe805ca2);
+        
+</script>
+</html>[top_neighborhoods_map.html](https://github.com/user-attachments/files/24430628/top_neighborhoods_map.html)
+)** 
    - Interactive markers showing the top 20 census tracts by combined score
    - Color-coded by performance (green = excellent, orange = good)
    - Click any marker for detailed neighborhood information
